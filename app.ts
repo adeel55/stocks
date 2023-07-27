@@ -1,7 +1,5 @@
-const getStockLevel = require("./src/utils/getStock");
+import stockService from "./src/services/stockService";
 
-const skuInput = (process.env.SKU = "KED089097/68/09"); // default SKU value
+const sku = process.env.SKU || "KED089097/68/09"; // default SKU value
 
-const currentStock = getStockLevel(skuInput).then((currentStock) =>
-  console.log(currentStock)
-);
+stockService(sku).then((currentStock) => console.log(currentStock));

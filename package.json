@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/app.js",
+    "start": "npm run build && node ./dist/app.js",
     "dev": "ts-node app",
     "test": "jest",
-    "tsc": "tsc"
+    "build": "rm -rf ./dist && tsc"
   },
   "author": "muhammad_adeel",
   "license": "ISC",
